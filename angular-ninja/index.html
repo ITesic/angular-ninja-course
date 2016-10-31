@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
   <title>Angular Ninja</title>
   <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 
@@ -13,7 +14,13 @@
   <div ng-app="ninja">
 
     <div ng-controller="NinjaCtrl">
-      Zdravo {{ime}}
+        <img ng-src="{{imagePath}}" alt="User image" />
+        <ul>
+            <li><strong>Ime i prezime:</strong> {{name}}</li>
+            <li><strong>Datum rodjenja:</strong> {{birthday}}</li>
+            <li><strong>Email:</strong> {{email}}</li>
+            <li><strong>Skype:</strong> {{skype}}</li>
+        </ul>
     </div>
 
   </div>
