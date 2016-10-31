@@ -1,15 +1,15 @@
-# Angular Ninja Environment setup
+# Environment setup
 
 ## Required
 
 * Node
   * npm package manager
   * http server
-* Atom IDE
 * Google Chrome
   * Angular dev tools
 
 ## Optional
 
+* Atom IDE
 * Git
   * Bash terminal
