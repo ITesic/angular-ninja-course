@@ -22,9 +22,12 @@ Zadatak 1: Profilna stranica
 
 ## Day 4
 
-* Scope, koncep
+* Dependency injection
+* Scope, koncept
 * $rootScope
 * ng-repeat
+* Data binding
+* ng-bind
 * ng-model
 
 Zadatak 2: Imenik - Ispis liste imena
