@@ -18,8 +18,23 @@
 * Modul (getter i setter)
 * Hello world aplikacija
 
+Zadatak 1: Profilna stranica
+
 ## Day 4
+
+* Scope, koncep
+* $rootScope
+* ng-repeat
+* ng-model
+
+Zadatak 2: Imenik - Ispis liste imena
+
 ## Day 5
+
+* Event handlers
+
+Zadatak 3: Imenik - Upisivanje novih kontakata
+
 ## Day 6
 ## Day 7
 ## Day 8
