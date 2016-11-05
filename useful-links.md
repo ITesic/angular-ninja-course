@@ -1,13 +1,24 @@
 # Useful links
 
+## HTML
+
+* [W3 Schools](http://www.w3schools.com/html/)
+
+## CSS
+
+* [W3 Schools](http://www.w3schools.com/css/)
+* [CSS Tricks](https://css-tricks.com/)
+
 ## JavaScript
 
+* [W3 Schools](http://www.w3schools.com/js/)
 * [Eloquent JavaScript (Book)](http://eloquentjavascript.net/)
 
 ## AngularJS
 
 * [AngularJS Developer Guide](https://docs.angularjs.org/guide)
 * [AngularJS API Reference](https://docs.angularjs.org/api)
+* [Angular Styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
 * [Angular UI - UI Library for angular based on Bootstrap](https://angular-ui.github.io/)
 
@@ -22,3 +33,8 @@
 * [Sublime Text](https://www.sublimetext.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Angular batarang (Chrome extension)](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
+
+## Other
+
+* [Bootstrap](http://getbootstrap.com/)
+* [Font Awesome](http://fontawesome.io/)
