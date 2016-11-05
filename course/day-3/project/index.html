@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>Angular Ninja</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app/index.js"></script>
+  <script src="app/NinjaCtrl.js"></script>
+</head>
+
+<body>
+  <div ng-app="ninja">
+
+    <h2>Ime {{covjek.ime}}</h2>
+
+    <div ng-controller="NinjaCtrl">
+
+        <h2>Ime {{covjek.ime}}</h2>
+
+        <img ng-src="{{imagePath}}" alt="User image" />
+        <ul>
+            <li><strong>Ime i prezime:</strong> {{name}}</li>
+            <li><strong>Datum rodjenja:</strong> {{birthday}}</li>
+            <li><strong>Email:</strong> {{email}}</li>
+            <li><strong>Skype:</strong> {{skype}}</li>
+        </ul>
+    </div>
+
+  </div>
+</body>
+
+</html>

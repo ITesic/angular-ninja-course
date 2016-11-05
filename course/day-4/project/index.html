@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Ninja</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+
+        <script src="node_modules/angular/angular.js"></script>
+
+        <script src="app/index.js"></script>
+
+        <script src="app/phonebook/phonebook.module.js"></script>
+        <script src="app/phonebook/phonebook.ctrl.js"></script>
+    </head>
+
+    <body>
+        <div ng-app="ninja">
+
+            <div ng-controller="PhonebookCtrl">
+                <h3>
+                    Trenutni korisnik:
+                    <em>{{user}}</em>
+                </h3>
+                <p>
+                    Promjeni ime:
+                    <input type="text" ng-model="user">
+                </p>
+                <hr>
+                <h3>Lista kontakata:</h3>
+                <ol>
+                    <li ng-repeat="name in names">
+                        {{name}}
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+    </body>
+
+</html>

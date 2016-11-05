@@ -1,0 +1,14 @@
+{
+  "name": "angular-ninja",
+  "version": "1.0.0",
+  "description": "Aplikacija za Angular Ninja kurs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itesic",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
