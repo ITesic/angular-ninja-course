@@ -1,2 +1,2 @@
 # angular-ninja-course
-Course matherial for AngularJS Course
+Course materials for AngularJS Course
