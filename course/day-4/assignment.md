@@ -16,3 +16,7 @@ Datum rođenja je `Date()` objekat i potrebno ga je formatirati prilikom prikaza
 Probajte ubaciti `ng-model` u `ng-repeat` i testirajte kako se ponaša u različitim situacijama.
 
 _Dodatno:_ Za bolji izgled aplikacije možete iskoristiti Twitter Bootstrap.
+
+__Primjer:__ Ovako bi trebalo da izgleda (uz dodatne stilove, ako ih budete koristili)
+
+![Primjer rjesenja](assignment-screenshot.png)
