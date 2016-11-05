@@ -36,9 +36,15 @@ Zadatak 2: Imenik - Ispis liste imena
 
 * Event handlers
 
-Zadatak 3: Imenik - Upisivanje novih kontakata
+Zadatak 3: Imenik - Prikaz jednog kontakta
 
 ## Day 6
+
+* Forme
+* Validacija forme
+
+Zadatak 4: Imenik - Upisivanje novih kontakata
+
 ## Day 7
 ## Day 8
 ## Day 9
