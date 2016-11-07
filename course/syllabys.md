@@ -1,5 +1,7 @@
 # Syllabus Angular Ninja
 
+---
+
 ## Day 1
 
 * Upoznavanje
@@ -8,7 +10,9 @@
 
 ## Day 2
 
-* Osvnoe JavaScript
+* Osnove JavaScript
+
+---
 
 ## Day 3
 
@@ -18,7 +22,7 @@
 * Modul (getter i setter)
 * Hello world aplikacija
 
-Zadatak 1: Profilna stranica
+_Zadatak 1:_ Profilna stranica
 
 ## Day 4
 
@@ -30,42 +34,73 @@ Zadatak 1: Profilna stranica
 * ng-bind
 * ng-model
 
-Zadatak 2: Imenik - Ispis liste imena
+_Zadatak 2:_ Imenik - Ispis liste imena
+
+---
 
 ## Day 5
 
-* Event handlers
+* Event handlers (ng-click)
+* orderBy
+* Ugradjeni filteri
 
-Zadatak 3: Imenik - Prikaz jednog kontakta
+_Zadatak 3:_ Imenik - Prikaz jednog kontakta, sortiranje liste kontakata
 
 ## Day 6
 
 * Forme
 * Validacija forme
 
-Zadatak 4: Imenik - Upisivanje novih kontakata
+_Zadatak 4:_ Imenik - Upisivanje novih kontakata
+
+---
 
 ## Day 7
+
+* Servisi
+*
+
+Pretraga kontakata
+
 ## Day 8
+
+* Rutiranje
+* UI Router
+
+---
+
 ## Day 9
+
+* Direktive
+
 ## Day 10
+
+---
 ## Day 11
+
+
 ## Day 12
+
+* Komunikacija sa serverom
+* REST API
+* Promise
+* $q
+
+---
+
 ## Day 13
+
+* $http
+* $resource
+
 ## Day 14
+
+---
+
 ## Day 15
+
+* Testiranje
+
 ## Day 16
-## Day 17
-## Day 18
-## Day 19
-## Day 20
-## Day 21
-## Day 22
-## Day 23
-## Day 23
-## Day 25
-## Day 26
-## Day 27
-## Day 28
-## Day 29
-## Day 30
+
+* Testiranje
