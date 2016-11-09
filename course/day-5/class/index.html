@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Ninja</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/main.css"/>
+    </head>
+
+    <body>
+        <div ng-app="ninja" class="container">
+            <div ng-controller="PhonebookCtrl">
+
+                <div class="row">
+                    <div class="col-sm-8">
+
+                        <h3>Lista kontakata:</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Ime</th>
+                                    <th>Datum rodjenja</th>
+                                    <th>Grad</th>
+                                    <th>Telefon</th>
+                                    <th>Email</th>
+                                    <th>Skype</th>
+                                    <th>Akcija</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="contact in contacts | orderBy:'-lastName'">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{contact.firstName + ' ' + contact.lastName}}</td>
+                                    <td>{{contact.birthday | date:'dd. MMM yyyy.'}}</td>
+                                    <td>{{contact.city | uppercase}}</td>
+                                    <td>{{contact.phone}}</td>
+                                    <td>{{contact.email}}</td>
+                                    <td>{{contact.skype}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" ng-click="open(contact)">Otvori</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3>Selektovani kontakt</h3>
+                        <div class="contact">
+                            {{selectedContact | json}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="node_modules/angular/angular.js"></script>
+
+        <script src="app/index.js"></script>
+
+        <script src="app/phonebook/phonebook.module.js"></script>
+        <script src="app/phonebook/phonebook.ctrl.js"></script>
+    </body>
+
+</html>
