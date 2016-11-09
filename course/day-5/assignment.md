@@ -7,4 +7,4 @@ Sortiranje neka bude rastuće.
 
 _Bonus:_ Uraditi i rastuće i opadajuće sortiranje. Prvi klik na na heading kolone sortira tabelu u rastućem redosledu, a drugi klik na isti heading sortira tabelu u opadajućem redosledu.
 
-_Bonus jos jedan:_ Napraviti zebra tabelu u css-u (svaka druga kolona je druge boje).
+_Bonus jos jedan:_ Napraviti zebra tabelu (svaka druga kolona je tamnije boje).
