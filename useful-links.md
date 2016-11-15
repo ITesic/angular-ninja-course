@@ -30,7 +30,9 @@
 ## Development tools
 
 * [Atom](https://atom.io/)
+* [Useful Atom plugins](https://www.sitepoint.com/10-essential-atom-add-ons/)
 * [Sublime Text](https://www.sublimetext.com/)
+* [Useful Sublime Text plugins](http://tutorialzine.com/2016/10/15-awesome-sublime-text-plugins-for-web-development/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Angular batarang (Chrome extension)](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
 

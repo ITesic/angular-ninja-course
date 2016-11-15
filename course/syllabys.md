@@ -32,6 +32,7 @@ _Zadatak 1:_ Profilna stranica
 * ng-repeat
 * Data binding
 * ng-bind
+* Expression
 * ng-model
 
 _Zadatak 2:_ Imenik - Ispis liste imena
@@ -48,30 +49,34 @@ _Zadatak 3:_ Imenik - Prikaz jednog kontakta, sortiranje liste kontakata
 
 ## Day 6
 
-* Forme
-* Validacija forme
+* Servisi
+* Refaktorisanje aplikacije, smjestanje logike u servise
 
-_Zadatak 4:_ Imenik - Upisivanje novih kontakata
+_Zadatak 4:_ Imenik - 
 
 ---
 
 ## Day 7
 
-* Servisi
-*
+* Forme
+* Validacija forme
 
-Pretraga kontakata
+_Zadatak 5:_ Imenik - Upisivanje novih kontakata
 
 ## Day 8
 
 * Rutiranje
 * UI Router
 
+_Zadatak 6:_
+
 ---
 
 ## Day 9
 
 * Direktive
+
+Zadatak: Search
 
 ## Day 10
 
