@@ -1,0 +1,15 @@
+body {
+  padding: 50px 100px;
+}
+
+body img {
+  width: 300px;
+}
+
+.table {
+  width: 100%;
+}
+
+.ng-submitted input.ng-invalid {
+  border: 1px solid red;
+}

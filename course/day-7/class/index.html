@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Ninja</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/main.css"/>
+    </head>
+
+    <body>
+        <div ng-app="ninja" class="container">
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <div ng-controller="PhonebookCtrl">
+                        <h3>Lista kontakata:</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Ime</th>
+                                    <th>Datum rodjenja</th>
+                                    <th>Grad</th>
+                                    <th>Telefon</th>
+                                    <th>Email</th>
+                                    <th>Skype</th>
+
+                                    <th>Pol</th>
+                                    <th>Akcija</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="contact in contacts | orderBy:'-lastName'">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{contact.firstName + ' ' + contact.lastName}}</td>
+                                    <td>{{contact.birthday | date:'dd. MMM yyyy.'}}</td>
+                                    <td>{{contact.city | uppercase}}</td>
+                                    <td>{{contact.phone}}</td>
+                                    <td>{{contact.email}}</td>
+                                    <td>{{contact.skype}}</td>
+                                    <td>{{contact.gender}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-secondary" ng-click="delete(contact)">Obrisi</button>
+                                        <button type="button" class="btn btn-primary" ng-click="open(contact)">Otvori</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div ng-controller="ContactCtrl">
+                        <h3>Selektovani kontakt</h3>
+                        <hr>
+                        <div class="contact">
+                            {{contact | json}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div ng-controller="NewContactCtrl">
+                        <h3>Novi kontakt</h3>
+                        <hr>
+                        <form ng-submit="saveContact(newContact)" name="newContactForm" novalidate>
+                            <label>First name:</label>
+                            <input type="text" ng-model="newContact.firstName" name="firstName" class="form-control" required>
+                            <span ng-show="newContactForm.firstName.$invalid">Nesto ne valja</span>
+                            <br>
+                            <label>Last name:</label>
+                            <input type="text" ng-model="newContact.lastName" name="lastName" class="form-control" required>
+                            <br>
+                            <label>Email:</label>
+                            <input type="email" ng-model="newContact.email" name="email" class="form-control">
+                            <br>
+                            <label>Pol:</label>
+                            <input type="radio" name="gender" ng-model="newContact.gender" value="m"> Muski <br>
+                            <input type="radio" name="gender" ng-model="newContact.gender" value="z"> Zenski <br>
+                            <br>
+                            <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="node_modules/angular/angular.js"></script>
+
+        <script src="app/index.js"></script>
+
+        <script src="app/phonebook/phonebook.module.js"></script>
+        <script src="app/phonebook/phonebook.service.js"></script>
+        <script src="app/phonebook/phonebook.ctrl.js"></script>
+
+        <script src="app/contact/contact.module.js"></script>
+        <script src="app/contact/contact.service.js"></script>
+        <script src="app/contact/contact.ctrl.js"></script>
+        <script src="app/contact/new-contact.ctrl.js"></script>
+    </body>
+
+</html>
