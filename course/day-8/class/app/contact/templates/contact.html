@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+            <h3>Selektovani kontakt</h3>
+            <hr>
+            <div class="contact" ng-if="isContactOpen()">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h4>{{fullName()}}</h4>
+                    </div>
+                    <div class="col-sm-5">
+                        <button
+                            ng-hide="contact.isFavorite"
+                            ng-click="toggleFavorite()"
+                            class="btn btn-primary">
+                            Set favorite
+                        </button>
+                        <button
+                            ng-show="contact.isFavorite"
+                            ng-click="toggleFavorite()"
+                            class="btn btn-secondary">
+                            Remove favorite
+                        </button>
+                    </div>
+                    <div class="col-sm-12">
+                        <br>
+                        <strong>Birthday</strong> {{contact.birthday | date:'dd. MM. yyyy'}} <br>
+                        <strong>Email</strong> {{contact.email}} <br>
+                        <strong>Phone</strong> {{contact.phone}} <br>
+                        <hr>
+                        <pre>
+                            {{contact | json}}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
