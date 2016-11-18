@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+            <h3>Lista kontakata:</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Ime</th>
+                        <th>Datum rodjenja</th>
+                        <th>Grad</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th>Skype</th>
+
+                        <th>Pol</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contact in contacts | orderBy:'-lastName'">
+                        <td>{{$index + 1}}</td>
+                        <td>{{contact.firstName + ' ' + contact.lastName}}</td>
+                        <td>{{contact.birthday | date:'dd. MMM yyyy.'}}</td>
+                        <td>{{contact.city | uppercase}}</td>
+                        <td>{{contact.phone}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.skype}}</td>
+                        <td>{{contact.gender}}</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary" ng-click="delete(contact)">Obrisi</button>
+                            <button type="button" class="btn btn-primary" ng-click="open(contact)">Otvori</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
