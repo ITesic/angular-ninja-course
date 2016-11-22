@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Ninja</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/main.css"/>
+    </head>
+
+    <body>
+        <div ng-app="ninja" class="container">
+            <header>
+
+            </header>
+            <div class="row">
+                <div class="col-md-12 navigation">
+                    <a ui-sref="lista" class="btn btn-default">Lista kontakata</a>
+                    <a ui-sref="novi-kontakt" class="btn btn-default">Novi kontakt</a>
+                    <hr>
+                </div>
+            </div>
+
+            <div ui-view></div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <hr>
+                        Copyright &copy;{{appAuthor}} {{appYear}} | Version {{appVersion}}
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="app/index.js"></script>
+        <script src="app/constants.js"></script>
+
+        <script src="app/phonebook/phonebook.module.js"></script>
+        <script src="app/phonebook/phonebook.service.js"></script>
+        <script src="app/phonebook/phonebook.ctrl.js"></script>
+
+        <script src="app/contact/contact.module.js"></script>
+        <script src="app/contact/contact.service.js"></script>
+        <script src="app/contact/contact.ctrl.js"></script>
+        <script src="app/contact/new-contact.ctrl.js"></script>
+        <script src="app/contact/edit-contact.ctrl.js"></script>
+
+        <script src="app/group/group.module.js"></script>
+        <script src="app/group/group-list.directive.js"></script>
+
+    </body>
+
+</html>
