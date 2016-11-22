@@ -52,7 +52,7 @@ _Zadatak 3:_ Imenik - Prikaz jednog kontakta, sortiranje liste kontakata
 * Servisi
 * Refaktorisanje aplikacije, smjestanje logike u servise
 
-_Zadatak 4:_ Imenik - 
+_Zadatak 4:_ Imenik -
 
 ---
 
@@ -68,7 +68,7 @@ _Zadatak 5:_ Imenik - Upisivanje novih kontakata
 * Rutiranje
 * UI Router
 
-_Zadatak 6:_
+_Zadatak 6:_ Rutiranje imenika
 
 ---
 
@@ -76,36 +76,47 @@ _Zadatak 6:_
 
 * Direktive
 
-Zadatak: Search
+_Zadatak 7:_ Grupe kontakata
 
 ## Day 10
+
+* Komponente
+* Custom filteri
+
+_Zadatak:_ Search
 
 ---
 ## Day 11
 
+* Komunikacija sa serverom
+* REST API
+* Asinhrono programiranje
+* Callbacks
+* Promise
+* $q
 
 ## Day 12
 
-* Komunikacija sa serverom
-* REST API
-* Promise
-* $q
+* $http
+* $resource
 
 ---
 
 ## Day 13
 
-* $http
-* $resource
+* Testiranje
+
 
 ## Day 14
+
+* Testiranje
 
 ---
 
 ## Day 15
 
-* Testiranje
+* Projekat
 
 ## Day 16
 
-* Testiranje
+* Projekat
