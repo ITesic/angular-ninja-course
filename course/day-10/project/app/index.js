@@ -1,7 +1,6 @@
 angular.module('ninja', [
   'ui.router',
   'ninja.user',
-  'ninja.phonebook',
   'ninja.contact',
   'unrelated.events'
 ])

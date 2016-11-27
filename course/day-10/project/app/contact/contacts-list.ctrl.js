@@ -1,8 +1,8 @@
 angular
-    .module('ninja.phonebook')
-    .controller('PhonebookCtrl',
-        function($rootScope, $scope, $filter, $state, phonebookService, contactService) {
-          $scope.contacts = phonebookService.contacts;
+    .module('ninja.contact')
+    .controller('ContactsListCtrl',
+        function($rootScope, $scope, $filter, $state, contactService) {
+          $scope.contacts = contactService.contacts;
 
           $scope.open = function(contact) {
             $state.go('contact', {
@@ -17,6 +17,6 @@ angular
           }
 
           $scope.delete = function(contact) {
-            phonebookService.removeContact(contact)
+            contactService.removeContact(contact)
           }
         });

@@ -2,7 +2,7 @@
     <header>
         <div class="row">
             <div class="col-md-6">
-                <h3>Lista kontakata:</h3>
+                <h3>Kontakti</h3>
             </div>
             <div class="col-md-6 text-right">
                 <a ui-sref="new-contact" class="btn btn-default page-header-button">
@@ -24,25 +24,33 @@
                         <th>Telefon</th>
                         <th>Email</th>
                         <th>Skype</th>
-
-                        <th>Pol</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="contact in contacts | withPhone | orderBy:'-lastName'">
                         <td>{{$index + 1}}</td>
-                        <td>{{contact.firstName + ' ' + contact.lastName | capitalize:5 }}</td>
-                        <td>{{contact.birthday | date:'dd. MMM yyyy.'}}</td>
+                        <td>
+                            <span class="fa fa-male" ng-if="contact.gender == 'm'"></span>
+                            <span class="fa fa-female" ng-if="contact.gender == 'z'"></span>
+                            {{contact.firstName + ' ' + contact.lastName | capitalize }}
+                            <span class="fa fa-star" ng-if="contact.favorite"></span>
+                        </td>
+                        <td>{{contact.birthday | date:'dd.MM.yyyy.'}}</td>
                         <td>{{contact.city | uppercase}}</td>
                         <td>{{contact.phone}}</td>
                         <td>{{contact.email}}</td>
                         <td>{{contact.skype}}</td>
-                        <td>{{contact.gender}}</td>
                         <td class="text-right">
-                            <button type="button" class="btn btn-danger" ng-click="delete(contact)">Obrisi</button>
-                            <button type="button" class="btn btn-secondary" ng-click="edit(contact)">Izmjeni</button>
-                            <button type="button" class="btn btn-primary" ng-click="open(contact)">Otvori</button>
+                            <button type="button" class="btn btn-default" ng-click="delete(contact)" title="Delete contact">
+                                <span class="fa fa-trash-o"></span>
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="edit(contact)" title="Edit contact">
+                                <span class="fa fa-pencil"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" ng-click="open(contact)" title="Open contact">
+                                <span class="fa fa-external-link"></span>
+                            </button>
                             <!-- <a ui-sref="kontakt({contact: contact})" class="btn btn-primary">Otvori</a> -->
                         </td>
                     </tr>

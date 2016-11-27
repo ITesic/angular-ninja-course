@@ -1,6 +1,6 @@
 angular
   .module('ninja.contact')
-  .controller('EditContactCtrl', function($scope, phonebookService, $state, $stateParams) {
+  .controller('EditContactCtrl', function($scope, $state, $stateParams) {
 
     $scope.newContact = $stateParams.contact;
 
