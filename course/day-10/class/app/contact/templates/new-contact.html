@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3>Novi kontakt</h3>
+        <hr>
+        <form ng-submit="saveContact(newContact)" name="newContactForm" novalidate>
+            <label>First name:</label>
+            <input type="text" ng-model="newContact.firstName" name="firstName" class="form-control" required>
+            <span ng-show="newContactForm.firstName.$invalid">Nesto ne valja</span>
+            <br>
+            <label>Last name:</label>
+            <input type="text" ng-model="newContact.lastName" name="lastName" class="form-control" required>
+            <br>
+            <label>Email:</label>
+            <input type="email" ng-model="newContact.email" name="email" class="form-control">
+            <br>
+            <label>Pol:</label>
+            <input type="radio" name="gender" ng-model="newContact.gender" value="m">
+            Muski
+            <br>
+            <input type="radio" name="gender" ng-model="newContact.gender" value="z">
+            Zenski
+            <br>
+            <br>
+            <span ng-repeat="g in allGroups">
+
+                <check-list items="allGroups" selected-items="newContact.groups" on-change="groupSelected(groups)"></check-list>
+
+                <input type="checkbox"  ng-click="toggleGroup(g)" ng-checked="isPresent(g)"> {{g}} <br>
+            </span>
+            <br>
+            <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
+        </form>
+<hr>
+        {{newContact | json}}
+    </div>
+</div>
