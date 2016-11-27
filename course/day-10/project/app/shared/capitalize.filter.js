@@ -1,5 +1,5 @@
 angular
-  .module('contact')
+  .module('ninja.shared')
   .filter('capitalize', function(){
     return function(str, charIndex){
       var words = str.toLowerCase().split(' ');

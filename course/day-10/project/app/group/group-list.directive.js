@@ -1,5 +1,5 @@
 angular
-  .module('group')
+  .module('ninja.group')
   .directive('groupList', function(){
     return {
       restrict: 'EA',
@@ -12,7 +12,7 @@ angular
         setFavorite: '&'
       },
       controller: function($scope){
-        
+
       },
       link: function(scope, elem, attrib, ctrl) {
 

@@ -1,3 +1,4 @@
-angular.module('contact', [
-  'group'
+angular.module('ninja.contact', [
+  'ninja.group',
+  'ninja.shared'
 ]);

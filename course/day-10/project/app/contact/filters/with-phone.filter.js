@@ -1,5 +1,5 @@
 angular
-  .module('contact')
+  .module('ninja.contact')
   .filter('withPhone', function(){
 
     function withPhoneFilter(contacts){

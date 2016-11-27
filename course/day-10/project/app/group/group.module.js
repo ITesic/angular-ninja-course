@@ -1,2 +1,2 @@
 angular
-  .module('group', []);
+  .module('ninja.group', []);

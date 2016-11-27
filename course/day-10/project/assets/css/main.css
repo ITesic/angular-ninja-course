@@ -1,9 +1,5 @@
 body {
-  padding: 50px 100px;
-}
-
-body img {
-  width: 300px;
+  padding-top: 70px;
 }
 
 .table {
@@ -12,4 +8,16 @@ body img {
 
 .ng-submitted input.ng-invalid {
   border: 1px solid red;
+}
+
+/* PAGE */
+
+.page header {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-header-button {
+  margin-top: 15px;
 }

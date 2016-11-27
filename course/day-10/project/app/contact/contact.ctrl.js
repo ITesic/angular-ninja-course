@@ -1,5 +1,5 @@
 angular
-  .module('contact')
+  .module('ninja.contact')
   .controller('ContactCtrl', function($scope, contactService, $stateParams){
 
     $scope.contact = $stateParams.contact;

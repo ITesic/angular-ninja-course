@@ -1,5 +1,5 @@
 angular
-  .module('phonebook')
+  .module('ninja.phonebook')
   .service('phonebookService', function() {
 
     this.contacts = [{

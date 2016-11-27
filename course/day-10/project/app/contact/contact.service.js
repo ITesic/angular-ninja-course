@@ -1,5 +1,5 @@
 angular
-  .module('contact')
+  .module('ninja.contact')
   .service('contactService', function (){
     this.contact = {
       firstName: '',

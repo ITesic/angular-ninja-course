@@ -1,5 +1,5 @@
 angular
-  .module('contact')
+  .module('ninja.contact')
   .controller('NewContactCtrl', function($scope, phonebookService, $state, groupService) {
 
     $scope.newContact = {
@@ -42,7 +42,7 @@ angular
 
     $scope.saveContact = function (contact) {
       phonebookService.addContact(contact);
-      $state.go('lista');
+      $state.go('list');
     }
 
   });

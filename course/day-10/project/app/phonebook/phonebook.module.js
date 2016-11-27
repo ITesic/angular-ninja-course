@@ -1,1 +1,3 @@
-angular.module('phonebook', []);
+angular.module('ninja.phonebook', [
+  'ninja.shared'
+]);

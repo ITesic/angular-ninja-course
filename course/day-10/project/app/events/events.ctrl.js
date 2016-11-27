@@ -1,5 +1,5 @@
 angular
-  .module('ninja')
+  .module('unrelated.events')
 
   .controller('GrandparentCtrl', function($scope, $timeout){
     $scope.grandparentContent = "Nema nista";

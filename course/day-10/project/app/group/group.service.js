@@ -1,5 +1,5 @@
 angular
-  .module('group')
+  .module('ninja.group')
   .service('groupService', function() {
 
     this.groups = [
@@ -10,4 +10,3 @@ angular
     ];
 
   });
-  
