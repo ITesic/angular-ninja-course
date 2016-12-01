@@ -1,0 +1,17 @@
+{
+  "name": "angular-ninja",
+  "version": "1.0.0",
+  "description": "Aplikacija za Angular Ninja kurs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/http-server ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itesic",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7"
+  }
+}
