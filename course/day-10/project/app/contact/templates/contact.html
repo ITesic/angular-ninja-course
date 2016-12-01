@@ -26,16 +26,24 @@
         <div class="col-sm-3">
             <h4>Informacije</h4>
             <p>
-                <strong>Birthday</strong>
+                <strong>Datum rodjenja: </strong>
                 {{contact.birthday | date:'dd.MM.yyyy.'}}
             </p>
             <p>
-                <strong>Email</strong>
+                <strong>Grad: </strong>
+                {{contact.city}}
+            </p>
+            <p>
+                <strong>Email adresa: </strong>
                 {{contact.email}}
             </p>
             <p>
-                <strong>Phone</strong>
+                <strong>Broj telefona: </strong>
                 {{contact.phone}}
+            </p>
+            <p>
+                <strong>Skype: </strong>
+                {{contact.email}}
             </p>
         </div>
         <div class="col-sm-3">

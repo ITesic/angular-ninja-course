@@ -40,14 +40,14 @@
                 <label for="phone">Telefon:</label>
                 <input
                     type="text"
-                    ng-model="newContact.phone"
+                    ng-model="contact.phone"
                     name="phone"
                     class="form-control">
                 <br>
                 <label for="skype">Skajp:</label>
                 <input
                     type="text"
-                    ng-model="newContact.skype"
+                    ng-model="contact.skype"
                     name="skype"
                     class="form-control">
                 <br>
@@ -66,14 +66,7 @@
                     Zenski
                 <br>
                 <label>Grupe:</label><br>
-                <span ng-repeat="g in allGroups track by $index">
-                    <input
-                        type="checkbox"
-                        ng-click="toggleGroup(g)"
-                        ng-checked="isPresent(g)">
-                    {{g.name}}
-                    <br>
-                </span>
+                <groups-check-list items="allGroups" selected="contact.groups"></groups-check-list>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Snimi</button>

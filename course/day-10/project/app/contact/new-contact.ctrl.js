@@ -30,15 +30,7 @@ angular
       }
     }
 
-    $scope.isPresent = function(group) {
-      var i;
-      for (i = 0; i < $scope.newContact.groups.length; i++){
-        if ($scope.newContact.groups[i].name == group.name) {
-          return true;
-        }
-      }
-      return false;
-    }
+    
 
     $scope.saveContact = function (contact) {
       contactService.createContact(contact);

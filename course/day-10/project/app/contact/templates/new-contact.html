@@ -67,14 +67,7 @@
                 <br>
                 <br>
                 <label>Grupe:</label><br>
-                <span ng-repeat="g in allGroups track by $index">
-                    <input
-                        type="checkbox"
-                        ng-click="toggleGroup(g)"
-                        ng-checked="isPresent(g)">
-                    {{g.name}}
-                    <br>
-                </span>
+                <groups-check-list items="allGroups" selected="newContact.groups"></groups-check-list>
                 <br>
                 <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
             </form>
