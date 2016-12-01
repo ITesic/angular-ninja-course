@@ -2,10 +2,10 @@ angular
   .module('ninja.contact')
   .config(function($stateProvider){
     $stateProvider
-    .state('list', {
+    .state('contacts', {
       url: '/',
-      templateUrl: 'app/contact/templates/contacts-list.html',
-      controller: 'ContactsListCtrl'
+      templateUrl: 'app/contact/templates/contacts.html',
+      controller: 'ContactsCtrl'
     })
     .state('contact', {
       url: '/contact',

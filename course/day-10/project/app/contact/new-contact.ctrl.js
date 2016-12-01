@@ -1,48 +1,48 @@
 angular
   .module('ninja.contact')
-  .controller('NewContactCtrl', function($scope, phonebookService, $state, groupService) {
+  .controller('NewContactCtrl', function($scope, contactService, $state, groupService) {
 
     $scope.newContact = {
-      groups: [
-        'family'
-      ]
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      skype: '',
+      gender: '',
+      groups: [],
+      favorite: false
     };
 
-    $scope.allGroups = groupService.groups;
+    $scope.allGroups = groupService.getGroups();
 
     $scope.toggleGroup = function(group) {
-      var i = $scope.newContact.groups.indexOf(group);
+      var i, position = -1;
+      for (i = 0; i < $scope.newContact.groups.length; i++){
+        if ($scope.newContact.groups[i].name == group.name) {
+          position = i;
+        }
+      }
 
-      if (i > -1) {
-        $scope.newContact.groups.splice(i, 1);
+      if (position > -1) {
+        $scope.newContact.groups.splice(position, 1);
       } else {
         $scope.newContact.groups.push(group);
       }
     }
+
     $scope.isPresent = function(group) {
-      if ($scope.newContact.groups.indexOf(group) > -1) {
-        return true;
+      var i;
+      for (i = 0; i < $scope.newContact.groups.length; i++){
+        if ($scope.newContact.groups[i].name == group.name) {
+          return true;
+        }
       }
       return false;
     }
 
-    $scope.toggleSelection = function toggleSelection(fruitName) {
-      var idx = $scope.selection.indexOf(fruitName);
-
-      // is currently selected
-      if (idx > -1) {
-        $scope.selection.splice(idx, 1);
-      }
-
-      // is newly selected
-      else {
-        $scope.selection.push(fruitName);
-      }
-    };
-
     $scope.saveContact = function (contact) {
-      phonebookService.addContact(contact);
-      $state.go('list');
+      contactService.createContact(contact);
+      $state.go('contacts');
     }
 
   });

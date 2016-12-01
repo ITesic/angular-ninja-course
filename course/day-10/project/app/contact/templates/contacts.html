@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="contact in contacts | withPhone | orderBy:'-lastName'">
+                    <tr ng-repeat="contact in contacts | orderBy:'-lastName'">
                         <td>{{$index + 1}}</td>
                         <td>
                             <span class="fa fa-male" ng-if="contact.gender == 'm'"></span>

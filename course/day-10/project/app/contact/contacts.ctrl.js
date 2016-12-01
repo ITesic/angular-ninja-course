@@ -1,6 +1,6 @@
 angular
     .module('ninja.contact')
-    .controller('ContactsListCtrl',
+    .controller('ContactsCtrl',
         function($rootScope, $scope, $filter, $state, contactService) {
           $scope.contacts = contactService.contacts;
 
@@ -17,6 +17,6 @@ angular
           }
 
           $scope.delete = function(contact) {
-            contactService.removeContact(contact)
+            contactService.deleteContact(contact)
           }
         });

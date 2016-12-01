@@ -5,26 +5,56 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form ng-submit="saveContact(newContact)" name="newContactForm" novalidate>
-                <label>First name:</label>
-                <input type="text" ng-model="newContact.firstName" name="firstName" class="form-control" required>
-                <span ng-show="newContactForm.firstName.$invalid">Nesto ne valja</span>
+            <form ng-submit="saveContact(contact)" name="contactForm" novalidate>
+                <label for="firstName">First name:</label>
+                <input
+                    type="text"
+                    ng-model="contact.firstName"
+                    name="firstName"
+                    class="form-control"
+                    required>
                 <br>
-                <label>Last name:</label>
-                <input type="text" ng-model="newContact.lastName" name="lastName" class="form-control" required>
+                <label for="lastName">Last name:</label>
+                <input
+                    type="text"
+                    ng-model="contact.lastName"
+                    name="lastName"
+                    class="form-control"
+                    required>
                 <br>
-                <label>Email:</label>
-                <input type="email" ng-model="newContact.email" name="email" class="form-control">
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    ng-model="contact.email"
+                    name="email"
+                    class="form-control">
                 <br>
-                <label>Pol:</label>
-                <input type="radio" name="gender" ng-model="newContact.gender" value="m">
-                Muski
+                <label for="gender">Pol:</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="contact.gender"
+                    value="m">
+                    Muski
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="contact.gender"
+                    value="z">
+                    Zenski
                 <br>
-                <input type="radio" name="gender" ng-model="newContact.gender" value="z">
-                Zenski
+                <label>Grupe:</label><br>
+                <span ng-repeat="g in allGroups track by $index">
+                    <input
+                        type="checkbox"
+                        ng-click="toggleGroup(g)"
+                        ng-checked="isPresent(g)">
+                    {{g.name}}
+                    <br>
+                </span>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
+                <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Snimi</button>
             </form>
         </div>
     </div>

@@ -15,14 +15,14 @@
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#/">
+                        <a class="navbar-brand" ui-sref="contacts">
                             Ninja Phonebook
                         </a>
                     </div>
 
                     <ul class="nav navbar-nav">
-                        <li><a ui-sref="list">Kontakti</a></li>
-                        <li><a href="#">Grupe kontakata</a></li>
+                        <li><a ui-sref="contacts">Kontakti</a></li>
+                        <li><a ui-sref="groups">Grupe kontakata</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,7 @@
         <script src="app/contact/contact.module.js"></script>
         <script src="app/contact/contact.states.js"></script>
         <script src="app/contact/contact.service.js"></script>
-        <script src="app/contact/contacts-list.ctrl.js"></script>
+        <script src="app/contact/contacts.ctrl.js"></script>
         <script src="app/contact/contact.ctrl.js"></script>
         <script src="app/contact/new-contact.ctrl.js"></script>
         <script src="app/contact/edit-contact.ctrl.js"></script>
@@ -79,7 +79,10 @@
         <script src="app/group/group.module.js"></script>
         <script src="app/group/group.states.js"></script>
         <script src="app/group/group.service.js"></script>
-        <script src="app/group/group.service.js"></script>
+        <script src="app/group/groups.ctrl.js"></script>
+        <script src="app/group/group.ctrl.js"></script>
+        <script src="app/group/new-group.ctrl.js"></script>
+        <script src="app/group/edit-group.ctrl.js"></script>
         <script src="app/group/group-list.directive.js"></script>
 
         <script src="app/events/events.module.js"></script>

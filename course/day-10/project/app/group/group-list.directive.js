@@ -7,9 +7,7 @@ angular
       // template: '<div>grupe</div>',
       templateUrl: 'app/group/templates/group-list.directive.html',
       scope: {
-        groups: '=',
-        zivotinja: '@',
-        setFavorite: '&'
+        groups: '='
       },
       controller: function($scope){
 
