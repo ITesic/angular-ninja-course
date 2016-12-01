@@ -1,12 +1,12 @@
 <section class="page new-contact">
     <header>
-        <h3>New contact</h3>
+        <h3>Novi kontakt</h3>
     </header>
 
     <div class="row">
         <div class="col-md-6">
             <form ng-submit="saveContact(newContact)" name="newContactForm" novalidate>
-                <label for="firstName">First name:</label>
+                <label for="firstName">Ime:</label>
                 <input
                     type="text"
                     ng-model="newContact.firstName"
@@ -14,11 +14,19 @@
                     class="form-control"
                     required>
                 <br>
-                <label for="lastName">Last name:</label>
+                <label for="lastName">Prezime:</label>
                 <input
                     type="text"
                     ng-model="newContact.lastName"
                     name="lastName"
+                    class="form-control"
+                    required>
+                <br>
+                <label for="city">Grad:</label>
+                <input
+                    type="text"
+                    ng-model="contact.city"
+                    name="city"
                     class="form-control"
                     required>
                 <br>
@@ -29,14 +37,14 @@
                     name="email"
                     class="form-control">
                 <br>
-                <label for="phone">Phone:</label>
+                <label for="phone">Telefon:</label>
                 <input
                     type="text"
                     ng-model="newContact.phone"
                     name="phone"
                     class="form-control">
                 <br>
-                <label for="skype">Skype:</label>
+                <label for="skype">Skajp:</label>
                 <input
                     type="text"
                     ng-model="newContact.skype"

@@ -18,17 +18,17 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Ime i prezime</th>
-                        <th>Datum rodjenja</th>
-                        <th>Grad</th>
-                        <th>Telefon</th>
-                        <th>Email</th>
-                        <th>Skype</th>
+                        <th><a ng-click="sort('firstName')">Ime i prezime</a></th>
+                        <th><a ng-click="sort('birthay')">Datum rodjenja</a></th>
+                        <th><a ng-click="sort('city')">Grad</a></th>
+                        <th><a ng-click="sort('phone')">Phone</a></th>
+                        <th><a ng-click="sort('email')">Email</a></th>
+                        <th><a ng-click="sort('skype')">Skype</a></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="contact in contacts | orderBy:'-lastName'">
+                    <tr ng-repeat="contact in contacts | orderBy:sortField:(order == 'asc')">
                         <td>{{$index + 1}}</td>
                         <td>
                             <span class="fa fa-male" ng-if="contact.gender == 'm'"></span>

@@ -4,6 +4,21 @@ angular
 
     $scope.groups = groupService.groups;
 
+    $scope.sortField = 'name';
+    $scope.order = 'asc';
+
+    $scope.sort = function(sortField) {
+      if ($scope.sortField == sortField) {
+        $scope.toggleSortOrder();
+      } else {
+          $scope.sortField = sortField;
+      }
+    }
+
+    $scope.toggleSortOrder = function(){
+      $scope.order = ($scope.order == 'asc') ? 'desc' : 'asc';
+    }
+
     $scope.open = function(group) {
       $state.go('group', {
         group: group

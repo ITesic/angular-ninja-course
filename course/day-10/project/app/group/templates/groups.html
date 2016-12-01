@@ -18,20 +18,20 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Naziv grupe</th>
-                        <th>Opis grupe</th>
-                        <th>Broj kontakata</th>
+                        <th><a ng-click="sort('name')">Naziv grupe</a></th>
+                        <th><a ng-click="sort('description')">Opis grupe</a></th>
+                        <th><a ng-click="sort('contactsCount')">Broj kontakata</a></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="group in groups | orderBy:'name' track by $index">
+                    <tr ng-repeat="group in groups | orderBy:sortField:(order == 'asc') track by $index">
                         <td>{{$index + 1}}</td>
                         <td>
                             {{group.name}}
                         </td>
                         <td>{{group.description}}</td>
-                        <td>{{contactsCount(group)}}</td>
+                        <td>{{group.contactsCount = contactsCount(group)}}</td>
 
                         <td class="text-right">
                             <button type="button" class="btn btn-default" ng-click="delete(group)" title="Delete group">
