@@ -1,0 +1,29 @@
+<section class="page edit-group">
+    <header>
+        <h3>Izmjena grupe</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form ng-submit="saveGroup(group)" name="groupForm" novalidate>
+                <label for="groupName">Naziv grupe:</label>
+                <input
+                    type="text" ng-model="group.name"
+                    name="groupName"
+                    class="form-control"
+                    required >
+                <br>
+                <label for="groupDescription">Opis grupe:</label>
+                <textarea
+                    ng-model="group.description"
+                    name="groupDescription"
+                    rows="4"
+                    class="form-control">
+                </textarea>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary" ng-disabled="groupForm.$invalid">Snimi</button>
+            </form>
+        </div>
+    </div>
+</section>
