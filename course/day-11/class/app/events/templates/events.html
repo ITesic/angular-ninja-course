@@ -1,0 +1,23 @@
+<div class="ucimo-evente">
+    <h2>Ucimo evente</h2>
+
+    <div ng-controller="GrandparentCtrl">
+        {{"Grandparent: " + grandparentContent}}
+        <button ng-click="fireGrandparentEvent()">Fire Grandparent event</button>
+
+        <div ng-controller="ParentCtrl">
+            {{"Parent: " + parentContent}}
+            <button ng-click="fireParentEvent()">Fire Parent event</button>
+
+            <div ng-controller="Child1Ctrl">
+                {{"Ctrl1: " + ctrl1Content}}
+                <button ng-click="fireChild1Event()">Fire Child1 event</button>
+            </div>
+
+            <div ng-controller="Child2Ctrl">
+                {{"Ctrl2: " + ctrl2Content}}
+                <button ng-click="unsubscribeFromParent()">Unsubscribe from parent</button>
+            </div>
+        </div>
+    </div>
+</div>
