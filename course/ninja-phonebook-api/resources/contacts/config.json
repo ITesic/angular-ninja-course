@@ -40,6 +40,46 @@
 			"required": false,
 			"id": "phone",
 			"order": 4
+		},
+		"city": {
+			"name": "city",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "city",
+			"order": 5
+		},
+		"gender": {
+			"name": "gender",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "gender",
+			"order": 6
+		},
+		"groups": {
+			"name": "groups",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "groups",
+			"order": 7
+		},
+		"favorite": {
+			"name": "favorite",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "favorite",
+			"order": 8
+		},
+		"skype": {
+			"name": "skype",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "skype",
+			"order": 9
 		}
 	}
 }
