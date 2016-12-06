@@ -7,12 +7,17 @@ angular
       templateUrl: 'app/group/templates/groups-check-list.directive.html',
       scope: {
         items: '=',
-        selected: '='
+        selected: '=?',
+        onChange: '&'
       },
       link: function(scope, elem, attr, ctrl) {
 
       },
       controller: function($scope) {
+
+        if (!$scope.selected) {
+          $scope.selected = [];
+        }
 
         $scope.toggleItem = function(item) {
           var i = $scope.selected.indexOf(item);
@@ -36,6 +41,7 @@ angular
 
         $scope.handleClick = function(item) {
           $scope.toggleItem(item);
+          $scope.onChange({selected: $scope.selected})
         };
 
 

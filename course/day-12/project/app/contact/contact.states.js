@@ -8,11 +8,12 @@ angular
       controller: 'ContactsCtrl'
     })
     .state('contact', {
-      url: '/contact',
+      url: '/contact/:id',
       templateUrl: 'app/contact/templates/contact.html',
       controller: 'ContactCtrl',
       params: {
-        contact: {}
+        contact: null,
+        id: null,
       }
     })
     .state('new-contact', {
@@ -21,11 +22,12 @@ angular
       templateUrl: 'app/contact/templates/new-contact.html'
     })
     .state('edit-contact', {
-      url: '/edit-contact',
+      url: '/edit-contact/:id',
       controller: 'EditContactCtrl',
       templateUrl: 'app/contact/templates/edit-contact.html',
       params: {
-        contact: {}
+        contact: null,
+        id: null,
       }
     })
   })

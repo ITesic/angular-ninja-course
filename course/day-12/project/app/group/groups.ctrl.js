@@ -2,7 +2,12 @@ angular
   .module('ninja.group')
   .controller('GroupsCtrl', function($scope, $state, groupService, contactService){
 
-    $scope.groups = groupService.groups;
+    $scope.groups = [];
+
+    groupService.getGroups()
+      .then(function(groups){
+        $scope.groups = groups;
+      })
 
     $scope.sortField = 'name';
     $scope.order = 'asc';

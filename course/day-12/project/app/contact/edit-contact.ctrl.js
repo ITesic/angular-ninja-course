@@ -1,36 +1,33 @@
 angular
   .module('ninja.contact')
-  .controller('EditContactCtrl', function($scope, $state, $stateParams, groupService) {
+  .controller('EditContactCtrl', function($scope, $state, $stateParams, contactService, groupService) {
 
-    $scope.contact = $stateParams.contact;
+    $scope.contact = {};
 
-    $scope.allGroups = groupService.getGroups();
-
-    $scope.toggleGroup = function(group) {
-      var i, position;
-      for (i = 0; i < $scope.contact.groups.length; i++){
-        if ($scope.contact.groups[i].name == group.name) {
-          position = i;
-        }
-      }
-
-      if (position > -1) {
-        $scope.contact.groups.splice(position, 1);
-      } else {
-        $scope.contact.groups.push(group);
-      }
+    if ($stateParams.contact) {
+      $scope.contact = $stateParams.contact;
+    } else if ($stateParams.id) {
+      contactService.getContact($stateParams.id)
+        .then(function(contact){
+          $scope.contact = contact;
+        });
     }
-    $scope.isPresent = function(group) {
-      var i;
-      for (i = 0; i < $scope.contact.groups.length; i++){
-        if ($scope.contact.groups[i].name == group.name) {
-          return true;
-        }
-      }
-      return false;
+
+    groupService.getGroups()
+      .then(function(groups){
+        $scope.allGroups = groups;
+      });
+
+    $scope.setContactGroups = function(groups){
+      $scope.contact.groups = groupService.reduceGroupsIds(groups);
+      console.log($scope.contact);
     }
 
     $scope.saveContact = function (contact) {
-      $state.go('contacts');
+      contactService.updateContact(contact.id, contact)
+        .then(function(newContact){
+          console.log(newContact);
+          $state.go('contacts');
+        });
     }
   });

@@ -1,30 +1,19 @@
 angular
   .module('ninja.group')
-  .service('groupService', function() {
-    this.group = {
-      name: '',
-      description: ''
-    }
-
-    this.groups = [{
-      name: 'family',
-      description: 'Group for family members'
-    }, {
-      name: 'friends',
-      description: 'Group for friends'
-    }, {
-      name: 'work',
-      description: 'Group for work collegues'
-    }, {
-      name: 'faculty',
-      description: 'Group for faculty collegues'
-    }, {
-      name: 'enemy',
-      description: 'Group for arch enemies'
-    }];
+  .service('groupService', function($http, API_BASE_URL) {
 
     this.getGroups = function() {
-      return this.groups;
+      return $http.get(API_BASE_URL + '/groups')
+        .then(function(response){
+          return response.data;
+        })
+    };
+
+    this.getGroup = function(id) {
+      return $http.get(API_BASE_URL + '/groups/' + id)
+        .then(function(response){
+          return response.data;
+        })
     };
 
     this.getGroupByName = function(groupName) {
@@ -45,6 +34,17 @@ angular
       }
 
       return groupsNames;
+    }
+
+    this.reduceGroupsIds = function(groups) {
+      var i;
+      var groupsIds = [];
+
+      for (i = 0; i < groups.length; i++) {
+        groupsIds.push(groups[i].id);
+      }
+
+      return groupsIds;
     }
 
     this.getGroupsNames = function() {
