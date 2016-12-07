@@ -3,7 +3,7 @@ angular
     .service('contactService', function($http, API_BASE_URL) {
 
         this.createContact = function(contactData) {
-            return $http.post(API_BASE_URL + '/contacts', contact)
+            return $http.post(API_BASE_URL + '/contacts', contactData)
                 .then(function(resource) {
                     return resource.data;
                 })
@@ -37,6 +37,8 @@ angular
             return $http.delete(API_BASE_URL + '/contacts/' + id);
         };
 
+        //TODO: Ponovo implementirati ovu funkcionalnost
+
         // this.getContactsByGroupName = function(groupName) {
         //     var i, j;
         //     var contactsInGroup = [];
@@ -53,10 +55,6 @@ angular
         //
         //     return contactsInGroup;
         // };
-
-        this.toggleFavorite = function(contact) {
-            contact.favorite = !contact.favorite;
-        };
 
         this.fullName = function(contact) {
             return contact.firstName + ' ' + contact.lastName;

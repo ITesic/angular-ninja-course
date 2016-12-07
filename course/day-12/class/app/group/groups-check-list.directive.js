@@ -7,21 +7,12 @@ angular
       templateUrl: 'app/group/templates/groups-check-list.directive.html',
       scope: {
         items: '=',
-        selected: '=?',
-        initiallySelected: '=?',
-        onChange: '&'
+        selected: '='
       },
       link: function(scope, elem, attr, ctrl) {
-        /* Postavlja inicijelno stanje checkboxova i  */
-        if (scope.initiallySelected) {
-          scope.selected = angular.copy(scope.initiallySelected);
-        }
+
       },
       controller: function($scope) {
-
-        if (!$scope.selected) {
-          $scope.selected = [];
-        }
 
         $scope.toggleItem = function(item) {
           var i = $scope.selected.indexOf(item);
@@ -45,7 +36,6 @@ angular
 
         $scope.handleClick = function(item) {
           $scope.toggleItem(item);
-          $scope.onChange({selected: $scope.selected})
         };
 
 

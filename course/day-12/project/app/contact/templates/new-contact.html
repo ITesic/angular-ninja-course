@@ -25,7 +25,7 @@
                 <label for="city">Grad:</label>
                 <input
                     type="text"
-                    ng-model="contact.city"
+                    ng-model="newContact.city"
                     name="city"
                     class="form-control"
                     required>
@@ -67,7 +67,11 @@
                 <br>
                 <br>
                 <label>Grupe:</label><br>
-                <groups-check-list items="allGroups" selected="newContact.groups"></groups-check-list>
+                <groups-check-list
+                    items="allGroups"
+                    initially-selected="newContact.groups"
+                    on-change="setContactGroups(selected)">
+                </groups-check-list>
                 <br>
                 <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
             </form>

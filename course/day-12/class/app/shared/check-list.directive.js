@@ -1,27 +1,18 @@
 angular
-  .module('ninja.group')
-  .directive('groupsCheckList', function(){
+  .module('ninja.shared')
+  .directive('checkList', function(){
     return {
       restrict: 'EA',
       replace: true,
-      templateUrl: 'app/group/templates/groups-check-list.directive.html',
+      templateUrl: 'app/shared/templates/check-list.directive.html',
       scope: {
         items: '=',
-        selected: '=?',
-        initiallySelected: '=?',
-        onChange: '&'
+        selected: '='
       },
       link: function(scope, elem, attr, ctrl) {
-        /* Postavlja inicijelno stanje checkboxova i  */
-        if (scope.initiallySelected) {
-          scope.selected = angular.copy(scope.initiallySelected);
-        }
+
       },
       controller: function($scope) {
-
-        if (!$scope.selected) {
-          $scope.selected = [];
-        }
 
         $scope.toggleItem = function(item) {
           var i = $scope.selected.indexOf(item);
@@ -35,8 +26,8 @@ angular
 
         $scope.isSelected = function(item) {
           var i;
-          for (i = 0; i < $scope.selected.length; i++){
-            if ($scope.selected[i].name == item.name) {
+          for (i = 0; i < $scope.selected.length; i++) {
+            if ($scope.selected[i] == item) {
               return true;
             }
           }
@@ -45,10 +36,7 @@ angular
 
         $scope.handleClick = function(item) {
           $scope.toggleItem(item);
-          $scope.onChange({selected: $scope.selected})
         };
-
-
       }
     }
   });

@@ -1,8 +1,9 @@
 angular
     .module('ninja.contact')
     .controller('ContactsCtrl',
-        function($rootScope, $scope, $filter, $state, contactService) {
+        function($rootScope, $scope, $filter, $state, contactService, helper) {
 
+          /* Dohvatamo kontakte sa servera. U slucaju greske hvatamo je i ispisujemo u konzolu. */
           contactService.getContacts()
             .then(function(contacts){
               $scope.contacts = contacts;
@@ -26,6 +27,7 @@ angular
             $scope.order = ($scope.order == 'asc') ? 'desc' : 'asc';
           }
 
+          /* Otvara state contact i prosledjuje mu Contact objekat i id kontakta */
           $scope.open = function(contact) {
             $state.go('contact', {
               contact: contact,
@@ -33,6 +35,7 @@ angular
             });
           }
 
+          /* Otvara state edit-contact i prosledjuje mu Contact objekat i id kontakta */
           $scope.edit = function(contact) {
             $state.go('edit-contact', {
               contact: contact,
@@ -40,7 +43,14 @@ angular
             });
           }
 
+          /* Brisemo kontakt sa APIja pa onda iz lokalne liste */
           $scope.delete = function(contact) {
-            contactService.deleteContact(contact)
+            contactService.deleteContact(contact.id)
+              .then(function(){
+                helper.removeFromList(contact, $scope.contacts);
+              })
+              .catch(function(e){
+                console.error(e);
+              })
           }
         });

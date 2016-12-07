@@ -66,11 +66,7 @@
                     Zenski
                 <br>
                 <label>Grupe:</label><br>
-                <groups-check-list
-                    items="allGroups"
-                    initially-selected="contact.groups"
-                    on-change="setContactGroups(selected)">
-                </groups-check-list>
+                <groups-check-list items="allGroups" selected="contact.groups"></groups-check-list>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Snimi</button>
