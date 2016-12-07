@@ -1,0 +1,398 @@
+{
+  "_type": "export",
+  "__export_format": 2,
+  "__export_date": "2016-12-07T09:06:04.880Z",
+  "__export_source": "insomnia.desktop.app:v3.7.3",
+  "resources": [
+    {
+      "modified": 1479858631674,
+      "created": 1479858631674,
+      "parentId": null,
+      "name": "Angular Ninja",
+      "_id": "wrk_f03b9f2461a647c8b861067016058b33",
+      "metaActiveEnvironmentId": null,
+      "_type": "workspace"
+    },
+    {
+      "modified": 1481029872837,
+      "created": 1479858659906,
+      "parentId": "wrk_f03b9f2461a647c8b861067016058b33",
+      "name": "Base Environment",
+      "data": {
+        "apiUrl": "https://ninja-phonebook-api.herokuapp.com"
+      },
+      "_id": "env_a26d846cd70a45e89cd85b0224c194fe",
+      "_type": "environment"
+    },
+    {
+      "modified": 1481028361216,
+      "created": 1479858659936,
+      "parentId": "wrk_f03b9f2461a647c8b861067016058b33",
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "creation": "2016-12-05T21:40:11.695Z",
+          "key": "sid",
+          "value": "1735ce9b54ab99dd3583552b58cdd6850bf6ea6093bd515d1d960903669e470baea54772ee646ea49d25cf14f336d50d1856c3b5b3ef18eb3f05b1d6e511d228",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": true,
+          "domain": "localhost",
+          "lastAccessed": "2016-12-06T12:46:01.216Z"
+        }
+      ],
+      "_id": "jar_0bf5d6ebbd004704949d436b69cbe017",
+      "_type": "cookie_jar"
+    },
+    {
+      "modified": 1480965274412,
+      "created": 1480965274412,
+      "parentId": "wrk_f03b9f2461a647c8b861067016058b33",
+      "name": "Contacts",
+      "environment": {},
+      "metaSortKey": -1480965274412,
+      "_id": "fld_57421dfba14a4be0b984ac0392661679",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1480965290370,
+      "created": 1480965290370,
+      "parentId": "wrk_f03b9f2461a647c8b861067016058b33",
+      "name": "Users",
+      "environment": {},
+      "metaSortKey": -1480965290370,
+      "_id": "fld_68e92400fda5469c94067de87a08f8c8",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1480965285353,
+      "created": 1480965285353,
+      "parentId": "wrk_f03b9f2461a647c8b861067016058b33",
+      "name": "Groups",
+      "environment": {},
+      "metaSortKey": -1480965285353,
+      "_id": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "_type": "request_group"
+    },
+    {
+      "modified": 1480966008944,
+      "created": 1480965970000,
+      "parentId": "fld_57421dfba14a4be0b984ac0392661679",
+      "url": "{{apiUrl}}/contacts/2af41dd69bf5c870",
+      "name": "Delete contact",
+      "method": "DELETE",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480965305751,
+      "_id": "req_163619af25274199a5f0adaf4b867abe",
+      "_type": "request"
+    },
+    {
+      "modified": 1481045113165,
+      "created": 1480966862133,
+      "parentId": "fld_57421dfba14a4be0b984ac0392661679",
+      "url": "{{apiUrl}}/contacts/0e701c0c9944a8e",
+      "name": "Get contact",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480965370031,
+      "_id": "req_44b7992997c04a5d9577c7499208e6d5",
+      "_type": "request"
+    },
+    {
+      "modified": 1481044869691,
+      "created": 1480965370032,
+      "parentId": "fld_57421dfba14a4be0b984ac0392661679",
+      "url": "https://ninja-phonebook-api.herokuapp.com/contacts",
+      "name": "Get all contacts",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480965370032,
+      "_id": "req_a09871a0fd4e43c49df320e955e4580b",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978454214,
+      "created": 1480965923334,
+      "parentId": "fld_57421dfba14a4be0b984ac0392661679",
+      "url": "{{apiUrl}}/contacts/fdb916309d69a8d1",
+      "name": "Update contact",
+      "method": "PUT",
+      "body": "firstName=Ilija&lastName=Tesic&birthday=06.03.1989.&email=ilija%40klika.ba&phone=123456789&skype=itesic&groups%5B%5D=ef85cbefe3a95aa5,%205ee91aa41e825920",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480965305752,
+      "_id": "req_c18644a540f749208924e2aa9210945e",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978360951,
+      "created": 1480965305753,
+      "parentId": "fld_57421dfba14a4be0b984ac0392661679",
+      "url": "{{apiUrl}}/contacts",
+      "name": "Create contact",
+      "method": "POST",
+      "body": "firstName=Marko&lastName=Markovic&birthday=06.03.1989.&email=marko%40klika.ba&phone=000&skype=mmarko",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480965305753,
+      "_id": "req_f7fe630b936940bea88293ebbe861018",
+      "_type": "request"
+    },
+    {
+      "modified": 1480974078317,
+      "created": 1480974066442,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/9dc19a075c94da7f",
+      "name": "Delete user",
+      "method": "DELETE",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480968428423,
+      "_id": "req_017c4a44400a4defba56a82181a4ef64",
+      "_type": "request"
+    },
+    {
+      "modified": 1480974135196,
+      "created": 1480968509211,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users",
+      "name": "Create user",
+      "method": "POST",
+      "body": "username=itesic&password=itesic",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480968428474,
+      "_id": "req_0726c9c4c7494509bb211c2d826944d5",
+      "_type": "request"
+    },
+    {
+      "modified": 1480973933672,
+      "created": 1480973851194,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/9dc19a075c94da7f",
+      "name": "Update user",
+      "method": "PUT",
+      "body": "password=ilija",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480968428424,
+      "_id": "req_1d222ddbc41e4fa38ca2fc9d61254b55",
+      "_type": "request"
+    },
+    {
+      "modified": 1480974007805,
+      "created": 1480973997252,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/login",
+      "name": "Log out",
+      "method": "POST",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480968428472,
+      "_id": "req_6c713ed755ba42d29ea187c78ed989a5",
+      "_type": "request"
+    },
+    {
+      "modified": 1480973845162,
+      "created": 1480968428476,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/9dc19a075c94da7f",
+      "name": "Get users",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480968428476,
+      "_id": "req_7ad4f11b469348d7b979bdf4cf43f653",
+      "_type": "request"
+    },
+    {
+      "modified": 1480973955298,
+      "created": 1480973942741,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/me",
+      "name": "Get current user",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480968428474,
+      "_id": "req_b77179fada504ae48e557800e9e7ce55",
+      "_type": "request"
+    },
+    {
+      "modified": 1480973979678,
+      "created": 1480973971611,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/login",
+      "name": "Log in",
+      "method": "POST",
+      "body": "username=itesic&password=itesic",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480968428473,
+      "_id": "req_db19e4bdc45045eaa9314e66b29ae69c",
+      "_type": "request"
+    },
+    {
+      "modified": 1480973839352,
+      "created": 1480968499453,
+      "parentId": "fld_68e92400fda5469c94067de87a08f8c8",
+      "url": "{{apiUrl}}/users/",
+      "name": "Get user",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480968428475,
+      "_id": "req_dbbfcae81adb4a8ba1a6720dc5fd2733",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978284880,
+      "created": 1480967018817,
+      "parentId": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "url": "{{apiUrl}}/groups",
+      "name": "Create group",
+      "method": "POST",
+      "body": "name=friends&description=Group%20for%20friends",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480967018817,
+      "_id": "req_0af2657020cb4bfbbdb4047f190573a1",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978306683,
+      "created": 1480966987488,
+      "parentId": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "url": "{{apiUrl}}/groups/45c22fb6225228c3",
+      "name": "Get group",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480967018842,
+      "_id": "req_23a1dea4352048e98b59cbd4b57505be",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978291206,
+      "created": 1480966852876,
+      "parentId": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "url": "{{apiUrl}}/groups",
+      "name": "Get all groups",
+      "method": "GET",
+      "body": "",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1480967018867,
+      "_id": "req_89e51e8e67a349f1b2779f5146b6f08c",
+      "_type": "request"
+    },
+    {
+      "modified": 1481027331206,
+      "created": 1480967646796,
+      "parentId": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "url": "{{apiUrl}}/groups/ef85cbefe3a95aa5",
+      "name": "Update group",
+      "method": "PUT",
+      "body": "contacts%5B%5D=",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480966852826,
+      "_id": "req_a1e6709e3db44f5dba61a00bffd381f7",
+      "_type": "request"
+    },
+    {
+      "modified": 1480978302891,
+      "created": 1480967934964,
+      "parentId": "fld_8238437e43884e87b0a8cc9814bacc19",
+      "url": "{{apiUrl}}/groups/45c22fb6225228c3",
+      "name": "Delete group",
+      "method": "DELETE",
+      "body": "",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1480966852825,
+      "_id": "req_adb8c6dbf7144487a860971c1a0b8267",
+      "_type": "request"
+    }
+  ]
+}
