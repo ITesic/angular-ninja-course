@@ -1,0 +1,10 @@
+<div class="check-list">
+    <label ng-repeat="item in items">
+        <input
+            type="checkbox"
+            ng-click="handleClick(item)"
+            ng-checked="isSelected(item)">
+        {{item}}
+    </label>
+    <br>
+</div>
