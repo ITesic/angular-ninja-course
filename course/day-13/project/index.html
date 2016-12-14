@@ -20,12 +20,12 @@
                         </a>
                     </div>
 
-                    <ul class="nav navbar-nav" ng-if="userLoggedIn()">
+                    <ul class="nav navbar-nav">
                         <li><a ui-sref="contacts">Kontakti</a></li>
                         <li><a ui-sref="groups">Grupe kontakata</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn()">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Ucenje <span class="caret"></span>
@@ -68,10 +68,7 @@
 
         <script src="app/user/user.module.js"></script>
         <script src="app/user/user.states.js"></script>
-        <script src="app/user/user.service.js"></script>
         <script src="app/user/user.ctrl.js"></script>
-        <script src="app/user/login.ctrl.js"></script>
-        <script src="app/user/register.ctrl.js"></script>
 
         <script src="app/contact/contact.module.js"></script>
         <script src="app/contact/contact.states.js"></script>
