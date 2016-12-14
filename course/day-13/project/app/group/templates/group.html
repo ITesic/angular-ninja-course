@@ -24,7 +24,7 @@
             <h4>Kontakti u ovoj grupi</h4>
             <ol ng-if="group.contacts.length">
                 <li ng-repeat="contact in group.contacts">
-                    <a ui-sref="contact({contact: contact})">
+                    <a ui-sref="contact({id: contact.id, contact: contact})">
                         {{contact.firstName + ' ' + contact.lastName | capitalize}}
                     </a>
                 </li>
