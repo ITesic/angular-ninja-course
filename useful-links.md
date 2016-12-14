@@ -39,4 +39,5 @@
 ## Other
 
 * [Bootstrap](http://getbootstrap.com/)
-* [Font Awesome](http://fontawesome.io/)
+* [Font Awesome - Font icons library](http://fontawesome.io/)
+* [Underscore - Utilities library](http://underscorejs.org/)

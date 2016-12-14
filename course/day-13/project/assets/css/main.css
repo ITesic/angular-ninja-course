@@ -1,0 +1,31 @@
+body {
+  padding-top: 70px;
+}
+
+.table {
+  width: 100%;
+}
+
+.ng-submitted input.ng-invalid {
+  border: 1px solid red;
+}
+
+/* PAGE */
+
+.page header {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-header-button {
+  margin-top: 15px;
+}
+
+.checkbox-label {
+  display: block;
+}
+
+.page.login {
+  padding: 50px 0;
+}

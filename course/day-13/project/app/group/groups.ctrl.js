@@ -9,13 +9,11 @@ angular
       contacts: contactService.getContacts()
     })
       .then(function(r){
-        $scope.groups = r.groups;
-
-        $scope.groups.forEach(function(group){
+        r.groups.forEach(function(group, i){
           group.contacts = contactService.filterContactsByGroupName(r.contacts, group.name);
         });
-
-      });
+        $scope.groups = r.groups;
+      })
 
     $scope.sortField = 'name';
     $scope.order = 'asc';
@@ -54,7 +52,4 @@ angular
         });
     };
 
-    $scope.contactsCount = function(group) {
-      return contactService.getContactsByGroupName(group.name).length
-    };
   });
