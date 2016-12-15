@@ -14,6 +14,8 @@ angular
             favorite: false
         };
 
+        $scope.errors = [];
+
         /* Dohvatamo sve grupe da bi ih koristili u group-check-list direktivi */
         groupService.getGroups()
             .then(function(groups) {
@@ -34,6 +36,9 @@ angular
             contactService.createContact(contact)
                 .then(function(newContact) {
                     $state.go('contacts');
+                })
+                .catch(function(e){
+                  $scope.errors = e.data.errors;
                 });
         }
 

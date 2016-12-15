@@ -6,10 +6,15 @@ angular
       description: ''
     }
 
+    $scope.errors = [];
+
     $scope.saveGroup = function() {
       groupService.createGroup($scope.newGroup)
         .then(function(){
           $state.go('groups');
+        })
+        .catch(function(e){
+          $scope.errors = e.data.errors;
         });
     }
   });
