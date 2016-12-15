@@ -1,5 +1,5 @@
 angular
   .module('ninja')
-  .config(function(){
-
+  .config(function($urlRouterProvider){
+    $urlRouterProvider.otherwise('/contacts');
   });

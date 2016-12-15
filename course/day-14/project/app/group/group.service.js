@@ -1,6 +1,6 @@
 angular
   .module('ninja.group')
-  .service('groupService', function($http, API_BASE_URL) {
+  .service('groupService', function($http, $cookies, API_BASE_URL) {
 
     this.createGroup = function(groupData) {
       return $http.post(API_BASE_URL + '/groups', groupData)
@@ -10,7 +10,11 @@ angular
     };
 
     this.getGroups = function() {
-      return $http.get(API_BASE_URL + '/groups')
+      return $http.get(API_BASE_URL + '/groups', {
+        headers: {
+          sid: $cookies.sid
+        }
+      })
         .then(function(response){
           return response.data;
         })

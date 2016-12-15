@@ -3,16 +3,21 @@ angular
   .controller('LoginCtrl', function($scope, $cookies, $state, userService){
 
     $scope.userCredentials = {
-      username: '',
-      password: ''
+      username: 'itesic',
+      password: 'itesic'
     }
 
     $scope.sendUserCredentials = function() {
       userService.login($scope.userCredentials.username, $scope.userCredentials.password)
         .then(function(user){
+          console.log(user);
           if (user.id) {
-            $cookies.put('sid', user.id);
-            $state.go('contacts');
+            userService.getCurrentUser()
+              .then(function(user){
+                $cookies.putObject('user', user);
+                $state.go('contacts');
+              });
+
           }
         })
         .catch(function(e){

@@ -20,12 +20,12 @@
                         </a>
                     </div>
 
-                    <ul class="nav navbar-nav" ng-if="userLoggedIn()">
+                    <ul class="nav navbar-nav" ng-if="userLoggedIn">
                         <li><a ui-sref="contacts">Kontakti</a></li>
                         <li><a ui-sref="groups">Grupe kontakata</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn()">
+                    <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Ucenje <span class="caret"></span>
@@ -35,8 +35,21 @@
                                <li><a ui-sref="learning-promises">Promises</a></li>
                              </ul>
                          </li>
-                        <li><a ui-sref="user-profile"><span class="fa fa-user"></span> Profile</a></li>
-                    </ul>
+                        <li ng-if="user.username" class="dropdown">
+                          <a href="#"  class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="fa fa-user"></span> {{ user.username }}
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a ui-sref="user-profile">Show user details</a></li>
+                            <li><a href="#">Edit user</a></li>
+                            <li><a href="#" ng-click="logout()">Logout</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn === false">
+                        <li><button ui-sref="login" class="btn btn-default navbar-btn">Login</button> &nbsp;</li>
+                        <li><button ui-sref="register" class="btn btn-primary navbar-btn">Register</button> &nbsp;</li>
+                      </ul>
                 </div>
             </nav>
 
@@ -61,6 +74,7 @@
 
         <script src="app/index.js"></script>
         <script src="app/constants.js"></script>
+        <script src="app/states.js"></script>
 
         <script src="app/shared/shared.module.js"></script>
         <script src="app/shared/capitalize.filter.js"></script>
