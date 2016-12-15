@@ -4,35 +4,35 @@
     </header>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="alert alert-danger" ng-repeat="error in errors" ng-if="errors">
+            {{error}}
+          </div>
             <form ng-submit="saveContact(contact)" name="contactForm" novalidate>
                 <label for="firstName">Ime:</label>
                 <input
                     type="text"
                     ng-model="contact.firstName"
                     name="firstName"
-                    class="form-control"
-                    required>
+                    class="form-control">
                 <br>
                 <label for="lastName">Prezime:</label>
                 <input
                     type="text"
                     ng-model="contact.lastName"
                     name="lastName"
-                    class="form-control"
-                    required>
+                    class="form-control">
                 <br>
                 <label for="city">Grad:</label>
                 <input
                     type="text"
                     ng-model="contact.city"
                     name="city"
-                    class="form-control"
-                    required>
+                    class="form-control">
                 <br>
                 <label for="email">Email:</label>
                 <input
-                    type="email"
+                    type="text"
                     ng-model="contact.email"
                     name="email"
                     class="form-control">
