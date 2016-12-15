@@ -4,6 +4,8 @@ angular
 
     $scope.contact = {};
 
+    $scope.errors = [];
+
     if ($stateParams.contact) {
       // Ako smo dobili citav kontakt u $stateParams onda koristimo njega
       $scope.contact = $stateParams.contact;
@@ -35,6 +37,9 @@ angular
       contactService.updateContact(contact.id, contact)
         .then(function(newContact){
           $state.go('contacts');
+        })
+        .catch(function(e){
+          $scope.errors = e.data.errors;
         });
     }
   });
