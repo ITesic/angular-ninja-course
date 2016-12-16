@@ -20,12 +20,12 @@
                         </a>
                     </div>
 
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" ng-if="userLoggedIn">
                         <li><a ui-sref="contacts">Kontakti</a></li>
                         <li><a ui-sref="groups">Grupe kontakata</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" ng-show="userLoggedIn">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Ucenje <span class="caret"></span>
@@ -35,7 +35,8 @@
                                <li><a ui-sref="learning-promises">Promises</a></li>
                              </ul>
                          </li>
-                        <li><a ui-sref="user-profile"><span class="fa fa-user"></span> Profile</a></li>
+                        <li><a ui-sref="user-profile"><span class="fa fa-user"></span> {{user.username}}</a></li>
+                        <li><button class="btn btn-default navbar-btn" ng-click="logout()">Logout</button></li>
                     </ul>
                 </div>
             </nav>
@@ -68,7 +69,9 @@
 
         <script src="app/user/user.module.js"></script>
         <script src="app/user/user.states.js"></script>
+        <script src="app/user/user.service.js"></script>
         <script src="app/user/user.ctrl.js"></script>
+        <script src="app/user/login.ctrl.js"></script>
 
         <script src="app/contact/contact.module.js"></script>
         <script src="app/contact/contact.states.js"></script>
