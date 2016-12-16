@@ -1,0 +1,31 @@
+<section class="page new-group">
+    <header>
+        <h3>Nova grupa</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-danger" ng-repeat="error in errors" ng-if="errors">
+              {{error}}
+            </div>
+            <form ng-submit="saveGroup(newGroup)" name="newGroupForm" novalidate>
+                <label for="groupName">Naziv grupe:</label>
+                <input
+                    type="text" ng-model="newGroup.name"
+                    name="groupName"
+                    class="form-control">
+                <br>
+                <label for="groupDescription">Opis grupe:</label>
+                <textarea
+                    ng-model="newGroup.description"
+                    name="groupDescription"
+                    rows="4"
+                    class="form-control">
+                </textarea>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary" ng-disabled="newGroupForm.$invalid">Snimi</button>
+            </form>
+        </div>
+    </div>
+</section>

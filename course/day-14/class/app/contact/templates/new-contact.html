@@ -1,0 +1,82 @@
+<section class="page new-contact">
+    <header>
+        <h3>Novi kontakt</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-danger" ng-repeat="error in errors" ng-if="errors">
+              {{error}}
+            </div>
+            <form ng-submit="saveContact(newContact)" name="newContactForm" novalidate>
+                <label for="firstName">Ime:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.firstName"
+                    name="firstName"
+                    class="form-control">
+                <br>
+                <label for="lastName">Prezime:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.lastName"
+                    name="lastName"
+                    class="form-control">
+                <br>
+                <label for="city">Grad:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.city"
+                    name="city"
+                    class="form-control">
+                <br>
+                <label for="email">Email:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.email"
+                    name="email"
+                    class="form-control">
+                <br>
+                <label for="phone">Telefon:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.phone"
+                    name="phone"
+                    class="form-control">
+                <br>
+                <label for="skype">Skajp:</label>
+                <input
+                    type="text"
+                    ng-model="newContact.skype"
+                    name="skype"
+                    class="form-control">
+                <br>
+                <label>Pol:</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="newContact.gender"
+                    value="m">
+                    Muski
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="newContact.gender"
+                    value="z">
+                    Zenski
+                <br>
+                <br>
+                <label>Grupe:</label><br>
+                <groups-check-list
+                    items="allGroups"
+                    initially-selected="newContact.groups"
+                    on-change="setContactGroups(selected)">
+                </groups-check-list>
+                <br>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" ng-disabled="newContactForm.$invalid">Snimi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
