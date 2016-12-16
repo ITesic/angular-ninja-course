@@ -47,8 +47,6 @@ angular
 
     }
 
-
-
     function updateUser(userId, userData) {
 
     }

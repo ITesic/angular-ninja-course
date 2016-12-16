@@ -1,19 +1,20 @@
 angular
   .module('ninja.user')
   .controller('RegisterCtrl', function($scope, $state, $q, userService){
+
     $scope.userCredentials = {
-      username: 'itesic1',
-      password: 'itesic1',
-      repeatPassword: 'itesic1'
+      username: '',
+      password: '',
+      repeatPassword: ''
     }
 
     $scope.sendUserCredentials = function() {
+      //TODO provjeriti da li su password i repeatPassword isti
       userService.createUser({
         username: $scope.userCredentials.username,
         password: $scope.userCredentials.password
       })
       .then(function(user){
-        console.log(user);
         $state.go('login');
       })
       .catch(function(e){
