@@ -8,6 +8,8 @@ Ako želite da probate praviti full stack aplikacije u JavaScriptu možete koris
 
 JavaScript aplikacije se mogu "kompajlirati" u desktop aplikacije za bilo koji OS, i za to se koristi [Electron](http://electron.atom.io/). Primjer takvih aplikacija su Atom, Slack, Popcorn Time, Insomnia REST client...
 
+Za pravljenje mobile aplikacija se koristi [Ionic](https://ionicframework.com/) framework koji je napravljen na Angularu. Ovo je jedan [tutorial](https://scotch.io/tutorials/create-your-first-mobile-app-with-angularjs-and-ionic) za početnike.
+
 Stvari koje ce vam mnogo značiti u daljem radu:
 * [Slijepo kucanje!](https://www.typingclub.com/)
 * Git
