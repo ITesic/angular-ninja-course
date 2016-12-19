@@ -1,0 +1,35 @@
+<section class="page group">
+    <header>
+        <h3>
+            <div class="row">
+                <div class="col-md-6">
+                    {{group.name | capitalize}}
+                </div>
+                <div class="col-md-6 text-right">
+
+                    <a ui-sref="edit-group({id: group.id, group: group})" class="btn btn-default">
+                        <span class="fa fa-pencil"></span>
+                        Izmjeni grupu</a>
+                </div>
+            </div>
+        </h3>
+    </header>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Opis grupe</h4>
+            <p>{{group.description}}</p>
+        </div>
+        <div class="col-sm-6">
+            <h4>Kontakti u ovoj grupi</h4>
+            <ol ng-if="group.contacts.length">
+                <li ng-repeat="contact in group.contacts">
+                    <a ui-sref="contact({contact: contact})">
+                        {{contact.firstName + ' ' + contact.lastName | capitalize}}
+                    </a>
+                </li>
+            </ol>
+            <p ng-if="!group.contacts.length">Ova grupa nema kontakata</p>
+        </div>
+    </div>
+</section>
