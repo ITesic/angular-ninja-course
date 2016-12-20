@@ -15,7 +15,7 @@
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" ui-sref="contacts">
+                        <a class="navbar-brand" ui-sref="/">
                             Ninja Phonebook
                         </a>
                     </div>
@@ -23,6 +23,7 @@
                     <ul class="nav navbar-nav" ng-if="userLoggedIn">
                         <li><a ui-sref="contacts">Kontakti</a></li>
                         <li><a ui-sref="groups">Grupe kontakata</a></li>
+                        <li><a ui-sref="users">Korisnici</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn">
