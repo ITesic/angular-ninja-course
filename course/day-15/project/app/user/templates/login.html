@@ -1,0 +1,22 @@
+<section class="page login">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <div class="alert alert-danger" ng-if="error">
+            {{error.message}}
+          </div>
+            <form ng-submit="sendUserCredentials()" name="loginForm">
+                <label>Username</label>
+                <br>
+                <input type="text" name="username" ng-model="userCredentials.username" class="form-control">
+                <br>
+                <label>Password</label>
+                <br>
+                <input type="password" name="password" ng-model="userCredentials.password" class="form-control">
+                <br>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

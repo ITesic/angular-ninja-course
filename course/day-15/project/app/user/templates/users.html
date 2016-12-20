@@ -1,0 +1,57 @@
+<section class="page users-list">
+    <header>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Korisnici</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <a ui-sref="new-user" class="btn btn-default page-header-button">
+                    <span class="fa fa-plus"></span>
+                    Novi korisnik</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><a ng-click="sort('firstName')">Ime i prezime</a></th>
+                        <th><a ng-click="sort('birthay')">Datum rodjenja</a></th>
+                        <th><a ng-click="sort('city')">Grad</a></th>
+                        <th><a ng-click="sort('phone')">Phone</a></th>
+                        <th><a ng-click="sort('email')">Email</a></th>
+                        <th><a ng-click="sort('skype')">Skype</a></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users | orderBy:sortField:(order == 'asc')">
+                        <td>{{$index + 1}}</td>
+                        <td>
+                            {{user.firstName + ' ' + user.lastName | capitalize }}
+                        </td>
+                        <td>{{user.birthday | date:'dd.MM.yyyy.'}}</td>
+                        <td>{{user.city | uppercase}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.skype}}</td>
+                        <td class="text-right">
+                            <button type="button" class="btn btn-default" ng-click="delete(user)" title="Delete user">
+                                <span class="fa fa-trash-o"></span>
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="edit(user)" title="Edit user">
+                                <span class="fa fa-pencil"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary" ng-click="open(user)" title="Open user">
+                                <span class="fa fa-external-link"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

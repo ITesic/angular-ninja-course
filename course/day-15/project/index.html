@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Ninja</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/main.css"/>
+    </head>
+
+    <body>
+        <div ng-app="ninja" class="container">
+
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">
+                            Ninja Phonebook
+                        </a>
+                    </div>
+
+                    <ul class="nav navbar-nav" ng-if="userLoggedIn">
+                        <li><a ui-sref="contacts">Kontakti</a></li>
+                        <li><a ui-sref="groups">Grupe kontakata</a></li>
+                        <li><a ui-sref="users">Korisnici</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Ucenje <span class="caret"></span>
+                            </a>
+                             <ul class="dropdown-menu">
+                               <li><a ui-sref="learning-events">Events</a></li>
+                               <li><a ui-sref="learning-promises">Promises</a></li>
+                             </ul>
+                         </li>
+                        <li ng-if="user.username" class="dropdown">
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="fa fa-user"></span> {{ user.username }}
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a ui-sref="user({id: $root.user.id, user: $root.user})">Show user details</a></li>
+                            <li><a ui-sref="edit-user({id: $root.user.id, user: $root.user})">Edit user</a></li>
+                            <li><a href="#" ng-click="logout()">Logout</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right" ng-if="userLoggedIn === false">
+                        <li><button ui-sref="login" class="btn btn-default navbar-btn">Login</button> &nbsp;</li>
+                        <li><button ui-sref="register" class="btn btn-primary navbar-btn">Register</button> &nbsp;</li>
+                      </ul>
+                </div>
+            </nav>
+
+            <div ui-view></div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <hr>
+                        Copyright &copy;{{appAuthor}} {{appYear}} | Version {{appVersion}}
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+
+        <script src="app/index.js"></script>
+        <script src="app/constants.js"></script>
+        <script src="app/states.js"></script>
+
+        <script src="app/shared/shared.module.js"></script>
+        <script src="app/shared/capitalize.filter.js"></script>
+        <script src="app/shared/check-list.directive.js"></script>
+
+        <script src="app/user/user.module.js"></script>
+        <script src="app/user/user.states.js"></script>
+        <script src="app/user/user.service.js"></script>
+        <script src="app/user/user-profile.ctrl.js"></script>
+        <script src="app/user/login.ctrl.js"></script>
+        <script src="app/user/register.ctrl.js"></script>
+        <script src="app/user/users.ctrl.js"></script>
+        <script src="app/user/user.ctrl.js"></script>
+        <script src="app/user/new-user.ctrl.js"></script>
+        <script src="app/user/edit-user.ctrl.js"></script>
+
+        <script src="app/contact/contact.module.js"></script>
+        <script src="app/contact/contact.states.js"></script>
+        <script src="app/contact/contact.service.js"></script>
+        <script src="app/contact/contacts.ctrl.js"></script>
+        <script src="app/contact/contact.ctrl.js"></script>
+        <script src="app/contact/new-contact.ctrl.js"></script>
+        <script src="app/contact/edit-contact.ctrl.js"></script>
+        <script src="app/contact/filters/with-phone.filter.js"></script>
+
+        <script src="app/group/group.module.js"></script>
+        <script src="app/group/group.states.js"></script>
+        <script src="app/group/group.service.js"></script>
+        <script src="app/group/groups.ctrl.js"></script>
+        <script src="app/group/group.ctrl.js"></script>
+        <script src="app/group/new-group.ctrl.js"></script>
+        <script src="app/group/edit-group.ctrl.js"></script>
+        <script src="app/group/group-list.directive.js"></script>
+        <script src="app/group/groups-check-list.directive.js"></script>
+
+        <script src="app/helper/helper.module.js"></script>
+        <script src="app/helper/helper.js"></script>
+
+        <!-- Unrelated  -->
+
+        <script src="app/events/events.module.js"></script>
+        <script src="app/events/events.states.js"></script>
+        <script src="app/events/events.ctrl.js"></script>
+
+        <script src="app/promises/promises.module.js"></script>
+        <script src="app/promises/promises.states.js"></script>
+        <script src="app/promises/promises.ctrl.js"></script>
+        <script src="app/promises/promises.service.js"></script>
+    </body>
+
+</html>

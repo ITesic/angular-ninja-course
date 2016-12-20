@@ -1,0 +1,61 @@
+<section class="page contact">
+    <header>
+        <h3>
+            <div class="row">
+                <div class="col-md-6">
+                    {{fullName() | capitalize}}
+                    <button ng-hide="contact.favorite" ng-click="toggleFavorite()" class="btn btn-default">
+                        <span class="fa fa-star-o"></span>
+                    </button>
+                    <button ng-show="contact.favorite" ng-click="toggleFavorite()" class="btn btn-default">
+                        <span class="fa fa-star"></span>
+                    </button>
+                </div>
+                <div class="col-md-6 text-right">
+
+                    <a ui-sref="edit-contact({id: contact.id, contact: contact})" class="btn btn-default">
+                        <span class="fa fa-pencil"></span>
+                        Izmjeni kontakt</a>
+                </div>
+            </div>
+        </h3>
+    </header>
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <h4>Informacije</h4>
+            <p>
+                <strong>Datum rodjenja: </strong>
+                {{contact.birthday | date:'dd.MM.yyyy.'}}
+            </p>
+            <p>
+                <strong>Grad: </strong>
+                {{contact.city}}
+            </p>
+            <p>
+                <strong>Email adresa: </strong>
+                {{contact.email}}
+            </p>
+            <p>
+                <strong>Broj telefona: </strong>
+                {{contact.phone}}
+            </p>
+            <p>
+                <strong>Skype: </strong>
+                {{contact.skype}}
+            </p>
+        </div>
+        <div class="col-sm-3">
+            <h4>Grupe</h4>
+            <group-list ng-if="contact.groups.length" groups="contact.groups" set-favorite="toggleFavorite()"></group-list>
+            <p ng-if="!contact.groups.length">Ovaj kontakt ne pripada ni jednog grupi</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Kontakt objekat</h4>
+            <pre>
+                {{contact | json}}
+            </pre>
+        </div>
+    </div>
+</section>

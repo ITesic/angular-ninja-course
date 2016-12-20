@@ -1,0 +1,79 @@
+<section class="page edit-contact">
+    <header>
+        <h3>Izmjena kontakta</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form ng-submit="saveContact(contact)" name="contactForm" novalidate>
+                <label for="firstName">Ime:</label>
+                <input
+                    type="text"
+                    ng-model="contact.firstName"
+                    name="firstName"
+                    class="form-control"
+                    required>
+                <br>
+                <label for="lastName">Prezime:</label>
+                <input
+                    type="text"
+                    ng-model="contact.lastName"
+                    name="lastName"
+                    class="form-control"
+                    required>
+                <br>
+                <label for="city">Grad:</label>
+                <input
+                    type="text"
+                    ng-model="contact.city"
+                    name="city"
+                    class="form-control">
+                <br>
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    ng-model="contact.email"
+                    name="email"
+                    class="form-control">
+                <br>
+                <label for="phone">Telefon:</label>
+                <input
+                    type="text"
+                    ng-model="contact.phone"
+                    name="phone"
+                    class="form-control">
+                <br>
+                <label for="skype">Skajp:</label>
+                <input
+                    type="text"
+                    ng-model="contact.skype"
+                    name="skype"
+                    class="form-control">
+                <br>
+                <label for="gender">Pol:</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="contact.gender"
+                    value="m">
+                    Muski
+                <input
+                    type="radio"
+                    name="gender"
+                    ng-model="contact.gender"
+                    value="z">
+                    Zenski
+                <br>
+                <label>Grupe:</label><br>
+                <groups-check-list
+                    items="allGroups"
+                    initially-selected="contact.groups"
+                    on-change="setContactGroups(selected)">
+                </groups-check-list>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Snimi</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+<section class="page user-profile">
+    <header>
+        <h3>User profile</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img ng-src="assets/img/{{user.image}}" alt="User profile image">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3>{{user.name}}</h3>
+            <p>
+                <strong>Birthday:
+                </strong>
+                {{user.birthday | date:'dd.MM.yyyy.'}}</p>
+            <p>
+                <strong>City:
+                </strong>
+                {{user.city}}</p>
+            <p>
+                <strong>Email:
+                </strong>
+                {{user.email}}</p>
+            <p>
+                <strong>Skype:
+                </strong>
+                {{user.skype}}</p>
+        </div>
+    </div>
+</section>
