@@ -5,6 +5,7 @@ angular
       login: login,
       logout: logout,
       createUser: createUser,
+      getUser: getUser,
       getCurrentUser: getCurrentUser,
       getAllUsers: getAllUsers,
       updateUser: updateUser,

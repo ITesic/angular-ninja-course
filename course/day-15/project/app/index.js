@@ -41,7 +41,7 @@ angular.module('ninja', [
       // Provjeravamo da li postoji cookie sa imenom 'ninjaUser'
       // Ako postoji onda je user ulogovan, ako ne postoji potrebno je da usera posaljemo na login
       var user = $cookies.getObject('ninjaUser');
-      console.log(user);
+
       if (!user) {
         // preventDefault() sprecava propagaciju promjene stejta da bi se izvrsio ovaj nas kod
         e.preventDefault();

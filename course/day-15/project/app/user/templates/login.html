@@ -1,6 +1,9 @@
 <section class="page login">
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
+          <div class="alert alert-danger" ng-if="error">
+            {{error.message}}
+          </div>
             <form ng-submit="sendUserCredentials()" name="loginForm">
                 <label>Username</label>
                 <br>

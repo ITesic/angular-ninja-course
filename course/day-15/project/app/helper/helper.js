@@ -2,7 +2,8 @@ angular
   .module('ninja.helper')
   .factory('helper', function(){
     return {
-      removeFromList: removeFromList
+      removeFromList: removeFromList,
+      parseErrors: parseErrors
     }
 
     /**
@@ -16,5 +17,20 @@ angular
       if (i > -1) {
         list.splice(i, 1);
       }
+    }
+
+    function parseErrors(e) {
+      if(!e){
+        return;
+      }
+      var errors = [];
+      if (e.errors) { // if array of errors
+        for(error in e.errors) {
+          errors.push(error);
+        }
+      } else {
+        errors.push(e);
+      }
+      return errors;
     }
   });

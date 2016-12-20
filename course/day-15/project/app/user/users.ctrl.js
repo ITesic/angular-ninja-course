@@ -1,9 +1,10 @@
 angular
   .module('ninja.user')
-  .controller('UsersCtrl', function($scope, userService){
+  .controller('UsersCtrl', function($scope, $state, userService, helper){
     $scope.users = [];
 
-    /* Dohvatamo kontakte sa servera. U slucaju greske hvatamo je i ispisujemo u konzolu. */
+    /* Dohvatamo korisnike sa servera.
+     * U slucaju greske hvatamo je i ispisujemo u konzolu. */
     userService.getAllUsers()
       .then(function(users){
         $scope.users = users;
@@ -45,9 +46,9 @@ angular
 
     /* Brisemo usera sa APIja pa onda iz lokalne liste */
     $scope.delete = function(user) {
-      userService.deleteContact(user.id)
+      userService.deleteUser(user.id)
         .then(function(){
-          helper.removeFromList(user, $scope.user);
+          helper.removeFromList(user, $scope.users);
         })
     }
 

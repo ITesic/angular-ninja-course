@@ -18,7 +18,7 @@ angular
               });
         })
         .catch(function(e){
-          console.error(e);
+          $scope.error = e.data;
         });
     }
   })

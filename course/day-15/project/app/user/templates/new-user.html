@@ -1,0 +1,66 @@
+<section class="page new-user">
+  <header>
+    <h3>Novi korisnik</h3>
+  </header>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form ng-submit="saveUser(newUser)" name="newUserForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="username">Korisnicko ime:</label>
+            <input type="text" ng-model="newUser.username" name="username" class="form-control" required>
+            <br>
+          </div>
+          <div class="col-md-6">
+            <label for="password">Lozinka:</label>
+            <input type="password" ng-model="newUser.password" name="password" class="form-control" required>
+            <br>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="firstName">Ime:</label>
+            <input type="text" ng-model="newUser.firstName" name="firstName" class="form-control" required>
+            <br>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName">Prezime:</label>
+            <input type="text" ng-model="newUser.lastName" name="lastName" class="form-control" required>
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="city">Grad:</label>
+            <input type="text" ng-model="newUser.city" name="city" class="form-control">
+            <br>
+          </div>
+          <div class="col-md-6">
+            <label for="email">Email:</label>
+            <input type="email" ng-model="newUser.email" name="email" class="form-control">
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="phone">Telefon:</label>
+            <input type="text" ng-model="newUser.phone" name="phone" class="form-control">
+            <br>
+          </div>
+          <div class="col-md-6">
+            <label for="skype">Skajp:</label>
+            <input type="text" ng-model="newUser.skype" name="skype" class="form-control">
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary" ng-disabled="newUserForm.$invalid">Snimi</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

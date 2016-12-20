@@ -1,0 +1,62 @@
+<section class="page edit-contact">
+    <header>
+        <h3>Izmjena kontakta</h3>
+    </header>
+
+    <div class="row">
+        <div class="col-md-6">
+          <div class="alert alert-danger" ng-repeat="error in errors" ng-if="errors">
+            {{error}}
+          </div>
+            <form ng-submit="saveUser(user)" name="userForm" novalidate>
+                <label for="firstName">Ime:</label>
+                <input
+                    type="text"
+                    ng-model="user.firstName"
+                    name="firstName"
+                    class="form-control"
+                    required>
+                <br>
+                <label for="lastName">Prezime:</label>
+                <input
+                    type="text"
+                    ng-model="user.lastName"
+                    name="lastName"
+                    class="form-control"
+                    required>
+                <br>
+                <label for="city">Grad:</label>
+                <input
+                    type="text"
+                    ng-model="user.city"
+                    name="city"
+                    class="form-control">
+                <br>
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    ng-model="user.email"
+                    name="email"
+                    class="form-control">
+                <br>
+                <label for="phone">Telefon:</label>
+                <input
+                    type="text"
+                    ng-model="user.phone"
+                    name="phone"
+                    class="form-control">
+                <br>
+                <label for="skype">Skajp:</label>
+                <input
+                    type="text"
+                    ng-model="user.skype"
+                    name="skype"
+                    class="form-control">
+                <br>
+
+                <br>
+                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Snimi</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -15,7 +15,7 @@
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" ui-sref="/">
+                        <a class="navbar-brand" href="/">
                             Ninja Phonebook
                         </a>
                     </div>
@@ -37,12 +37,12 @@
                              </ul>
                          </li>
                         <li ng-if="user.username" class="dropdown">
-                          <a href="#"  class="dropdown-toggle" data-toggle="dropdown">
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="fa fa-user"></span> {{ user.username }}
                           </a>
                           <ul class="dropdown-menu">
-                            <li><a ui-sref="user-profile">Show user details</a></li>
-                            <li><a href="#">Edit user</a></li>
+                            <li><a ui-sref="user({id: $root.user.id, user: $root.user})">Show user details</a></li>
+                            <li><a ui-sref="edit-user({id: $root.user.id, user: $root.user})">Edit user</a></li>
                             <li><a href="#" ng-click="logout()">Logout</a></li>
                           </ul>
                         </li>
@@ -89,6 +89,8 @@
         <script src="app/user/register.ctrl.js"></script>
         <script src="app/user/users.ctrl.js"></script>
         <script src="app/user/user.ctrl.js"></script>
+        <script src="app/user/new-user.ctrl.js"></script>
+        <script src="app/user/edit-user.ctrl.js"></script>
 
         <script src="app/contact/contact.module.js"></script>
         <script src="app/contact/contact.states.js"></script>
